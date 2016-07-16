@@ -1,4 +1,19 @@
 export const INITIAL_STATE = {
+    filterText: '',
+    display: {
+        selection: '',
+        matches: []
+    },
+    ranking: [
+        {team: 'germany',       points: 0},
+        {team: 'spain',         points: 0},
+        {team: 'switzerland',   points: 0},
+        {team: 'russia',        points: 0},
+        {team: 'belgium',       points: 0},
+        {team: 'italy',         points: 0},
+        {team: 'france',        points: 0},
+        {team: 'england',       points: 0},
+    ],
     teams: {
         germany: {
             name: 'Germany', wins: 0, loses: 0, draws: 0, points: 0
@@ -27,7 +42,7 @@ export const INITIAL_STATE = {
     },
     matches: [
         {
-            matchNumber: 1, roundNumber: 1, status: 'pending', teamScores: {
+            matchNumber: 1, status: 'pending', teamScores: {
                 germany: 0, belgium: 0
             }
         },

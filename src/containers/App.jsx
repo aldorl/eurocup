@@ -7,65 +7,66 @@ import Panel from '../components/common/panel';
 import Footer from '../components/common/footer';
 
 function App ({
-    children,
-    state,
-    location
+  children,
+  state,
+  location
 }) {
-    return (
-        <section style={style.wrapper}>
+  return (
+    <section style={style.wrapper}>
 
-            <HeroHeading
-                title="EuroCup Tourney"
-                subtitle="Built on React JS"
-            />
+      <HeroHeading
+        title="EuroCup Tourney"
+        subtitle="Built on React JS"
+      />
 
-            <section style={style.container}>
+      <section style={style.container}>
+        
+        { /* Render router example */ }
+        <Panel
+          faIcon="link"
+          style={style.panel}
+          title="Click away dearies" >
+          <Tabs activePath={location.pathname} >
+            { children }
+          </Tabs>
+        </Panel>
 
-                { /* Render router example */ }
-                <Panel
-                    faIcon="link"
-                    style={style.panel}
-                    title="Click away dearies" >
-                    <Tabs activePath={location.pathname} >
-                        { children }
-                    </Tabs>
-                </Panel>
+        { /* Render Redux state */ }
+        { /*
+          <Panel
+            faIcon="tree"
+            style={style.panel}
+            title="Redux State" >
+            <CodeBlock code={state} />
+          </Panel>
+        */ }
 
-                { /* Render Redux state */ }
-                <Panel
-                    faIcon="tree"
-                    style={style.panel}
-                    title="Redux State" >
-                    <CodeBlock code={state} />
-                </Panel>
+      </section>
 
-
-            </section>
-
-        </section>
-    )
+    </section>
+  )
 }
 
 const style = {
-    wrapper: {
-        width: '100%'
-    },
-    container: {
-        width: '100%',
-        minWidth: 450,
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center'
-    },
-    column: {
-        display: 'flex',
-        flexDirection: 'column'
-    },
-    panel: {
-        // width: 800
-    }
+  wrapper: {
+    width: '100%'
+  },
+  container: {
+    width: '100%',
+    minWidth: 450,
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
+  },
+  column: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  panel: {
+    width: 900
+  }
 };
 
 export default connect(
-    (state) => ({ state })
+  (state) => ({ state })
 )(App);

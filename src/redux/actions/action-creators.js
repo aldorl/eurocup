@@ -5,7 +5,11 @@ import {
   EDIT_MATCH,
   INCREMENT_SCORE,
   DECREMENT_SCORE,
-  SAVE_MATCH
+  SAVE_MATCH,
+  UPDATE_RANKING,
+  UPDATE_FILTER,
+  UPDATE_DISPLAY,
+  CLEAR_DISPLAY
 } from './types';
 
 export const addWin         = makeActionCreator(ADD_WIN, 'team');
@@ -15,6 +19,13 @@ export const editMatch      = makeActionCreator(EDIT_MATCH, 'matchIndex');
 export const incrementScore = makeActionCreator(INCREMENT_SCORE, 'matchIndex', 'teamKey');
 export const decrementScore = makeActionCreator(DECREMENT_SCORE, 'matchIndex', 'teamKey');
 export const saveMatch      = makeActionCreator(SAVE_MATCH, 'matchIndex');
+export const updateRanking  = makeActionCreator(
+                                UPDATE_RANKING, 'homeTeamKey', 'homeTeamPoints',
+                                'awayTeamKey', 'awayTeamPoints'
+                              );
+export const updateFilter   = makeActionCreator(UPDATE_FILTER, 'filterText');
+export const updateDisplay  = makeActionCreator(UPDATE_DISPLAY, 'selectedTeam', 'teamMatches');
+export const clearDisplay   = makeActionCreator(CLEAR_DISPLAY);
 
 /**
  * To reduce boilerplate code, we can utilize generic function to generate

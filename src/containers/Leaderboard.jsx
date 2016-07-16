@@ -3,7 +3,8 @@ import LeaderRow from '../components/leaderboard/LeaderRow';
 import { connect } from 'react-redux';
 
 function Leaderboard ({
-  teams
+  teams,
+  ranking
 }) {
   return (
     <div>
@@ -20,11 +21,9 @@ function Leaderboard ({
           </tr>
         </thead>
         <tbody>
-          {
-            Object.keys(teams).map((teamKey, index) => (
-              <LeaderRow team={teams[teamKey]} key={index} teamKey={teamKey}/>
-            ))
-          }
+          {ranking.sort((a, b) => b.points - a.points).map((item, index) => (
+            <LeaderRow team={teams[item.team]} key={index} teamKey={item.team}/>
+          ))}
         </tbody>
       </table>
     </div>
@@ -33,7 +32,8 @@ function Leaderboard ({
 
 export default connect(
   (state) => ({
-    teams: state.teams
+    teams: state.teams,
+    ranking: state.ranking
   }),
   null
 )(Leaderboard);

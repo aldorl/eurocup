@@ -2,8 +2,12 @@ import React from 'react';
 import TeamScore from './TeamScore';
 import {connect} from 'react-redux';
 import {
-  editMatch, saveMatch, addWin, addLose, addDraw
+  editMatch, saveMatch, addWin, addLose, addDraw, updateRanking, clearDisplay
 } from '../../redux/actions/action-creators';
+
+const WIN_POINTS = 3;
+const DRAW_POINTS = 1;
+const LOSE_POINTS = 0;
 
 class MatchEntry extends React.Component {
   constructor(props) {
@@ -18,7 +22,7 @@ class MatchEntry extends React.Component {
   }
 
   onSaveClick() {
-    const { index, saveMatch, addWin, addLose, addDraw, match } = this.props;
+    const { index, saveMatch, addWin, addLose, addDraw, updateRanking,  clearDisplay, match } = this.props;
 
     let teams = [];
     Object.keys(match.teamScores).map((teamKey, localIndex) => {
@@ -28,14 +32,24 @@ class MatchEntry extends React.Component {
     if (teams[0].score === teams[1].score) {
       addDraw(teams[0].key);
       addDraw(teams[1].key);
+      updateRanking(
+        teams[0].key, DRAW_POINTS, teams[1].key, DRAW_POINTS
+      );
     } else if (teams[0].score > teams[1].score) {
       addWin(teams[0].key);
       addLose(teams[1].key);
+      updateRanking(
+        teams[0].key, WIN_POINTS, teams[1].key, LOSE_POINTS
+      );
     } else {
       addWin(teams[1].key);
       addLose(teams[0].key);
+      updateRanking(
+        teams[1].key, WIN_POINTS, teams[0].key, LOSE_POINTS
+      );
     }
 
+    clearDisplay();
     saveMatch(index);
   }
 
@@ -76,5 +90,5 @@ class MatchEntry extends React.Component {
 }
 
 export default connect(null, {
-  editMatch, saveMatch, addWin, addLose, addDraw
+  editMatch, saveMatch, addWin, addLose, addDraw, updateRanking, clearDisplay
 })(MatchEntry);
