@@ -10,10 +10,6 @@ function _removePrefix(path) {
 }
 
 export default {
-    /**
-     * Thunk for changing routes
-     * @param path
-     */
     goToPath(path) {
         if (!path) return;
 

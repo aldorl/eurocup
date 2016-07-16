@@ -6,7 +6,7 @@ function Matches ({
   matches
 }) {
   return (
-    <table>
+    <table style={style.table}>
       <thead>
         <tr>
           <th>Game #</th>
@@ -21,6 +21,12 @@ function Matches ({
       )}</tbody>
     </table>
   );
+}
+
+const style = {
+  table: {
+    margin: '0 auto'
+  }
 }
 
 export default connect(

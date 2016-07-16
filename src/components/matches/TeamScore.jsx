@@ -27,11 +27,11 @@ class MatchEntry extends React.Component {
       <button onClick={this.onIncrementClick}>+</button>
     </li>);
     const decrementButton = (<li>
-      <button onClick={this.onDecrementClick}>+</button>
+      <button onClick={this.onDecrementClick}>-</button>
     </li>);
     return (
       <th>
-        <ul>
+        <ul style={style.list}>
           <li>{teamKey}</li>
           <li>
             {matchStatus == "pending" ? 'No score' : teamScores[teamKey]}
@@ -43,6 +43,12 @@ class MatchEntry extends React.Component {
     );
   }
 }
+
+const style = {
+  list: {
+    listStyleType: 'none'
+  }
+};
 
 export default connect(null, {
   incrementScore, decrementScore

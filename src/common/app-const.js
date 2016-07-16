@@ -16,28 +16,36 @@ export const INITIAL_STATE = {
     ],
     teams: {
         germany: {
-            name: 'Germany', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'Germany', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/DFBEagle.svg/293px-DFBEagle.svg.png'
         },
         spain: {
-            name: 'Spain', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'Spain', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/en/3/31/Spain_National_Football_Team_badge.png'
         },
         switzerland: {
-            name: 'Switzerland', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'Switzerland', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/de/thumb/5/53/SFV_Logo.svg/500px-SFV_Logo.svg.png'
         },
         russia: {
-            name: 'Russia', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'Russia', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/en/7/77/Russian_Football_Union.png'
         },
         belgium: {
-            name: 'Belgium', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'Belgium', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/en/f/f5/Belgium_urbsfa.png'
         },
         italy: {
-            name: 'Italy', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'Italy', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/97/FIGC_logo.svg/356px-FIGC_logo.svg.png'
         },
         france: {
-            name: 'France', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'France', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/fr/6/67/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_de_Football.svg'
         },
         england: {
-            name: 'England', wins: 0, loses: 0, draws: 0, points: 0
+            name: 'England', wins: 0, loses: 0, draws: 0, points: 0,
+            logo: 'https://upload.wikimedia.org/wikipedia/en/3/38/England_crest_2009.svg'
         }
     },
     matches: [

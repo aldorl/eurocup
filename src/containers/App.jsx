@@ -4,7 +4,6 @@ import CodeBlock from '../components/common/code-block';
 import HeroHeading from '../components/common/hero-heading';
 import Tabs from '../components/tabs/tabs';
 import Panel from '../components/common/panel';
-import Footer from '../components/common/footer';
 
 function App ({
   children,
@@ -20,12 +19,12 @@ function App ({
       />
 
       <section style={style.container}>
-        
+
         { /* Render router example */ }
         <Panel
-          faIcon="link"
+          faIcon="futbol-o"
           style={style.panel}
-          title="Click away dearies" >
+          title="Soccer Time!" >
           <Tabs activePath={location.pathname} >
             { children }
           </Tabs>
@@ -49,7 +48,8 @@ function App ({
 
 const style = {
   wrapper: {
-    width: '100%'
+    width: '100%',
+    textAlign: 'center'
   },
   container: {
     width: '100%',
@@ -63,7 +63,7 @@ const style = {
     flexDirection: 'column'
   },
   panel: {
-    width: 900
+    width: 700
   }
 };
 

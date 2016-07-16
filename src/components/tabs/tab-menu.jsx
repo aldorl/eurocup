@@ -34,6 +34,6 @@ const style = {
         borderTopRightRadius: 10,
         borderBottomLeftRadius: 10,
         margin: 0,
-        padding: 0
+        padding: '0 30%'
     }
 };

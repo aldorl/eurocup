@@ -5,6 +5,7 @@ import TeamDisplay from '../components/teams/TeamDisplay';
 import { connect } from 'react-redux';
 
 function Teams ({
+  teams,
   matches,
   ranking,
   filterText,
@@ -12,16 +13,17 @@ function Teams ({
 }) {
   return (
     <div>
-      <span>Teams Page</span>
       <SearchBar filterText={filterText}/>
       <TeamResults filterText={filterText} ranking={ranking} matches={matches}/>
-      <TeamDisplay display={display}/>
+      { display.selection == '' ? null :
+      <TeamDisplay display={display} teams={teams}/> }
     </div>
   );
 }
 
 export default connect(
     (state) => ({
+      teams: state.teams,
       matches: state.matches,
       ranking: state.ranking,
       filterText: state.filterText,

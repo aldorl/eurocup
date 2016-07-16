@@ -1,4 +1,5 @@
 import React from 'react';
+import TeamLogo from './TeamLogo';
 import MatchEntry from '../matches/MatchEntry';
 
 class TeamDisplay extends React.Component {
@@ -7,14 +8,16 @@ class TeamDisplay extends React.Component {
   }
 
   render() {
-		const { display } = this.props;
+		const { display, teams } = this.props;
+    const teamLogo = (
+      <TeamLogo team={teams[display.selection]}/>
+    );
     return (
 			<div className="row">
-        <h4>Selected teams</h4>
-        <span>{display.selection}</span>
 
+        {display.selection === '' ? null : teamLogo}
         <h4>History of matches</h4>
-        <table>
+        <table style={style.table}>
           <thead>
             <tr>
               <th>Game #</th>
@@ -31,6 +34,12 @@ class TeamDisplay extends React.Component {
 
 			</div>
     );
+  }
+}
+
+const style = {
+  table: {
+    margin: '0 auto'
   }
 }
 

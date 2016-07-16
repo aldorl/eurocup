@@ -10,7 +10,7 @@ function Leaderboard ({
     <div>
       The teams are the following
 
-      <table>
+      <table style={style.table}>
         <thead>
           <tr>
             <th>Name</th>
@@ -28,6 +28,12 @@ function Leaderboard ({
       </table>
     </div>
   );
+}
+
+const style = {
+  table: {
+    margin: '0 auto'
+  }
 }
 
 export default connect(
