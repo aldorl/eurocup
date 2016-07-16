@@ -8,5 +8,5 @@ import styles from './scss/style.scss';
 
 ReactDOM.render(
     <Root store={configureStore(INITIAL_STATE)} />,
-    document.getElementById('example-app')
+    document.getElementById('app')
 );

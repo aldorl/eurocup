@@ -13,9 +13,8 @@ export default function Tabs ({
             <TabMenu
                 activePath={activePath}
                 items={{
-                    increment   : '/',
-                    decrement   : '/decrement',
-                    reset       : '/reset'
+                    leaderboard   : '/',
+                    matches   : '/matches'
                 }}
             />
 

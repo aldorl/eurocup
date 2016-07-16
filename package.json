@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "EuroCup",
   "version": "1.0.0",
-  "description": "A slightly opinionated boilerplate project for ReactJS",
+  "description": "EuroCup Tourney Built on ReactJS",
   "scripts": {
     "start": "npm run prod",
     "dev": "npm run build:dev && npm run start-dev-server",
@@ -16,15 +16,8 @@
     "start-dev-server": "cross-env NODE_ENV=development babel-node server.js",
     "start-server": "cross-env NODE_ENV=production babel-node server.js"
   },
-  "author": "Mike Chabot",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mikechabot/react-boilerplate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mikechabot/react-boilerplate/issues"
-  },
+  "author": "Aldo Ruiz",
+  "license": "WTFPL",
   "dependencies": {
     "autoprefixer": "^6.3.6",
     "axios": "^0.12.0",
