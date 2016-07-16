@@ -17,7 +17,6 @@ function Leaderboard ({
             <th>Loses</th>
             <th>Draws</th>
             <th>Points</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -28,7 +27,6 @@ function Leaderboard ({
           }
         </tbody>
       </table>
-
     </div>
   );
 }

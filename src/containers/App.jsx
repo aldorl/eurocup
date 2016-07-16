@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import AjaxRequest from '../components/ajax/ajax-request';
 import CodeBlock from '../components/common/code-block';
 import HeroHeading from '../components/common/hero-heading';
 import Tabs from '../components/tabs/tabs';
@@ -63,7 +62,7 @@ const style = {
         flexDirection: 'column'
     },
     panel: {
-        // width: 450 // check if necessary
+        // width: 800
     }
 };
 

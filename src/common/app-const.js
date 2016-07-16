@@ -1,9 +1,4 @@
 export const INITIAL_STATE = {
-    model: {
-        fooEntity: {},
-        barEntity: {}
-    },
-    counter: 0,
     teams: {
         germany: {
             name: 'Germany', wins: 0, loses: 0, draws: 0, points: 0
@@ -32,23 +27,23 @@ export const INITIAL_STATE = {
     },
     matches: [
         {
-            matchNumber: 1, roundNumber: 1, status: 'notPlayed', teamScores: {
-                germany: null, belgium: null
+            matchNumber: 1, roundNumber: 1, status: 'pending', teamScores: {
+                germany: 0, belgium: 0
             }
         },
         {
-            matchNumber: 2, status: 'notPlayed', teamScores: {
-                spain: null, italy: null
+            matchNumber: 2, status: 'pending', teamScores: {
+                spain: 0, italy: 0
             }
         },
         {
-            matchNumber: 3, status: 'notPlayed', teamScores: {
-                switzerland: null, france: null
+            matchNumber: 3, status: 'pending', teamScores: {
+                switzerland: 0, france: 0
             }
         },
         {
-            matchNumber: 4, status: 'notPlayed', teamScores: {
-                russia: null, england: null
+            matchNumber: 4, status: 'pending', teamScores: {
+                russia: 0, england: 0
             }
         }
     ]

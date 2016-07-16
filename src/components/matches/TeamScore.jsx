@@ -23,17 +23,21 @@ class MatchEntry extends React.Component {
 
   render() {
     const { index, matchStatus, teamKey, teamScores} = this.props;
+    const incrementButton = (<li>
+      <button onClick={this.onIncrementClick}>+</button>
+    </li>);
+    const decrementButton = (<li>
+      <button onClick={this.onDecrementClick}>+</button>
+    </li>);
     return (
       <th>
         <ul>
           <li>{teamKey}</li>
-          <li>{matchStatus == "played" ? teamScores[teamKey] : 'No score'}</li>
           <li>
-            <button onClick={this.onIncrementClick}>+</button>
+            {matchStatus == "pending" ? 'No score' : teamScores[teamKey]}
           </li>
-          <li>
-            <button onClick={this.onDecrementClick}>-</button>
-          </li>
+          {matchStatus == "scoring" ? incrementButton : null}
+          {matchStatus == "scoring" ? decrementButton : null}
         </ul>
       </th>
     );
