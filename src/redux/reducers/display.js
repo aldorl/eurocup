@@ -13,7 +13,6 @@ const filterText = (state = INITIAL_STATE.display, action) => {
       };
     }
     case CLEAR_DISPLAY: {
-      console.log('wtf???');
       return {selection: '', matches: []};
     }
     default: {

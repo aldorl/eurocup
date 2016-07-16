@@ -22,7 +22,8 @@ class MatchEntry extends React.Component {
   }
 
   onSaveClick() {
-    const { index, saveMatch, addWin, addLose, addDraw, updateRanking,  clearDisplay, match } = this.props;
+    const { index, saveMatch, addWin, addLose, addDraw,
+      updateRanking,  clearDisplay, match } = this.props;
 
     let teams = [];
     Object.keys(match.teamScores).map((teamKey, localIndex) => {
@@ -54,7 +55,7 @@ class MatchEntry extends React.Component {
   }
 
   render() {
-    const {match, index} = this.props;
+    const {match, index, actions} = this.props;
     const editButton = (
       <button onClick={this.onEditClick}>Edit Match</button>
     );
@@ -63,6 +64,13 @@ class MatchEntry extends React.Component {
     );
     const matchFinishedText = (
       <span>Done</span>
+    );
+    const actionsDisplay = (
+      <th>
+        {match.status == 'pending' ? editButton : null}
+        {match.status == 'scoring' ? saveButton : null}
+        {match.status == 'played' ? matchFinishedText : null}
+      </th>
     );
 
     return (
@@ -79,11 +87,7 @@ class MatchEntry extends React.Component {
               teamScores={match.teamScores} />
           )
         }
-        <th>
-          {match.status == 'pending' ? editButton : null}
-          {match.status == 'scoring' ? saveButton : null}
-          {match.status == 'played' ? matchFinishedText : null}
-        </th>
+        { actions == 'true' ? actionsDisplay : null }
       </tr>
     );
   }

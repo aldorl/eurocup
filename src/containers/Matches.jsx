@@ -17,7 +17,7 @@ function Matches ({
         </tr>
       </thead>
       <tbody>{matches.map((match, index) =>
-        <MatchEntry match={match} key={index} index={index}/>
+        <MatchEntry match={match} key={index} index={index} actions='true'/>
       )}</tbody>
     </table>
   );

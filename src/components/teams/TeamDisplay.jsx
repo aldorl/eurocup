@@ -24,11 +24,10 @@ class TeamDisplay extends React.Component {
               <th>Status</th>
               <th>Away</th>
               <th>Home</th>
-              <th>Action</th>
             </tr>
           </thead>
           <tbody>{display.matches.map((match, index) => (
-            <MatchEntry match={match} key={index} index={index}/>
+            <MatchEntry match={match} key={index} index={index} actions='false'/>
           ))}</tbody>
         </table>
 
