@@ -14,6 +14,7 @@ export default function Tabs ({
                 activePath={activePath}
                 items={{
                     leaderboard   : '/',
+                    teams : '/teams',
                     matches   : '/matches'
                 }}
             />
