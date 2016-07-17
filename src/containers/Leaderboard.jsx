@@ -8,14 +8,12 @@ function Leaderboard ({
 }) {
   return (
     <div>
-      The teams are the following
-
       <table style={style.table}>
         <thead>
           <tr>
             <th>Name</th>
             <th>Wins</th>
-            <th>Loses</th>
+            <th>Losses</th>
             <th>Draws</th>
             <th>Points</th>
           </tr>

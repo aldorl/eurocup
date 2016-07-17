@@ -12,7 +12,6 @@ function App ({
 }) {
   return (
     <section style={style.wrapper}>
-
       <HeroHeading
         title="EuroCup Tourney"
         subtitle="Built on React JS"
@@ -30,7 +29,7 @@ function App ({
           </Tabs>
         </Panel>
 
-        { /* Render Redux state */ }
+        { /* Render Redux state -> for debugging */ }
         { /*
           <Panel
             faIcon="tree"

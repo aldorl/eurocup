@@ -74,7 +74,7 @@ class MatchEntry extends React.Component {
     );
 
     return (
-      <tr>
+      <tr class="matchEntryRow">
         <th>{match.matchNumber}</th>
         <th>{match.status}</th>
         {

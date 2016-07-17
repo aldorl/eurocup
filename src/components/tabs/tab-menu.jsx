@@ -7,7 +7,7 @@ export default function TabMenu({
     activePath
 }) {
     return (
-        <ul style={style.tabs}>
+        <ul className='tabMenu' style={style.tabs}>
             { map(items, _renderTab(activePath)) }
         </ul>
     );

@@ -12,7 +12,7 @@ class LeaderRow extends React.Component {
       <tr>
         <td>{team.name}</td>
         <td>{team.wins}</td>
-        <td>{team.loses}</td>
+        <td>{team.losses}</td>
         <td>{team.draws}</td>
         <td>{team.points}</td>
       </tr>

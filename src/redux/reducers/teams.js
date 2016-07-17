@@ -22,7 +22,7 @@ const teams = (state = INITIAL_STATE.teams, action) => {
                 ...state,
                 [action.team]: {
                     ...state[action.team],
-                    loses: state[action.team].loses + 1
+                    losses: state[action.team].losses + 1
                 }
             }
         }

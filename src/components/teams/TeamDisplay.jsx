@@ -16,6 +16,9 @@ class TeamDisplay extends React.Component {
 			<div className="row">
 
         {display.selection === '' ? null : teamLogo}
+        <h2 style={style.selectedTeam}>
+          <strong>{display.selection}</strong>
+        </h2>
         <h4>History of matches</h4>
         <table style={style.table}>
           <thead>
@@ -39,6 +42,9 @@ class TeamDisplay extends React.Component {
 const style = {
   table: {
     margin: '0 auto'
+  },
+  selectedTeam: {
+    textTransform: 'capitalize'
   }
 }
 

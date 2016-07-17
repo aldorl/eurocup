@@ -61,5 +61,10 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
+  },
+  "devDependencies": {
+    "expect-jsx": "^2.6.0",
+    "react-shallow-testutils": "^2.0.0",
+    "react-stateless-wrapper": "^1.0.7"
   }
 }
