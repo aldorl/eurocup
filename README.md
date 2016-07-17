@@ -26,6 +26,7 @@ This is where the score for a game can be submitted. This is the process:
 1. `npm install`
 2. Launch environment:
   *  **Development**: `npm run dev`
+3. Visit at http://localhost:3060/
 
 #### Test Commands
 * `npm test`: Shortcut for `test:coverage`
@@ -45,7 +46,7 @@ This is where the score for a game can be submitted. This is the process:
 * [redux-logger](https://github.com/theaqua/redux-logger) for capturing actions
 
 #### Routing
-* [react-router](https://github.com/reactjs/react-router) for client-side [routing](https://github.com/mikechabot/react-boilerplate/blob/master/src/routes.js)
+* [react-router](https://github.com/reactjs/react-router) for client-side routing
 
 #### Styling
 * Supports [SCSS & SASS](http://sass-lang.com/) syntax
